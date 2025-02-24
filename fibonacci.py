@@ -1,6 +1,6 @@
 #Fibonacci 
 
-nth = int(input("input a number : "))
+nth = int(input("Enter a number : "))
 if nth <= 0:
     print("nth should be positive") 
 elif nth == 1:

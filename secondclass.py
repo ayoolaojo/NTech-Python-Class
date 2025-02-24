@@ -1,10 +1,3 @@
- 
-
-
-
-
-
-
 fruits = ["apple", "banana","mango"]
 newlist = []
 for fruit in fruits:
@@ -27,13 +20,7 @@ numbers.sort(reverse = True)
 print(numbers)
 
 
-yourInput = input("type an alphabet :").lower()
-if len(yourInput) != 1 and yourInput != yourInput.isalpha():
-    print("invalid input, please enter a single alphabet")
-else:
-    print("")
-    
-vowel = ["a", "e", "i", "o", "u"]    
+ 
     
         
 
