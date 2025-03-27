@@ -164,11 +164,69 @@ print("Lagos time is: ", lagos_time.strftime("%Y-%m-%d %H:%M:%S %Z"))
 todays_date = CurrentDate
 print("today's date is ", CurrentDate.strftime("%A, %d %B %Y"))
 
+new_date = datetime.now()
+formatted_date = new_date.strftime("%d-%m")
+print(formatted_date)
+
+formatted_date =new_date.strftime("%A-%d-%m")
+print(formatted_date)
+
+today = date.today()
+print(today)
+
+print(today.year)
+print(today.month)
+print(today.day)
+
+import time
+current_time = time.time()
+print(current_time)
 
 
-def Calculate_age(birthyear):      
-      today = datetime.today()
-      age = today - birthyear
-      print("Your age is ", age )
-      
-Calculate_age(2000)
+
+
+def calculate_age(birthdate):     
+      today = date.today()
+      age = today.year-birthdate.year - ((today.month,today.day) < (birthdate.month, birthdate.day))
+      return age
+
+
+
+birthdate = input("enter your birthdate: eg 2024-03-27>>>>>>:")
+f_birthdate= datetime.strptime(birthdate, "%Y-%m-%d").date()
+print(calculate_age(f_birthdate))
+
+
+
+
+
+
+
+
+
+
+
+from datetime import datetime
+
+mydate = "12 March 2025"
+fmy_date = datetime.strptime(mydate,"%d %B %Y").date()
+fmy_date = fmy_date.strftime("%d %B %Y")
+
+
+print(fmy_date)
+
+timezone = pytz.timezone("America/New_York")
+newyork_time =datetime.now(timezone).strftime("%H:%M:%S")
+print(f"Current time in NewYork is: {newyork_time}")
+
+timezone = pytz.timezone("Asia/Tokyo")
+tokyo_time = datetime.now(timezone).strftime("%H:%M:%S")
+print(f"Current time in Tokyo is: {tokyo_time}")
+
+timezone = pytz.timezone("Australia/Sydney")
+sydney_time = datetime.now(timezone).strftime("%H:%M:%S")
+print(f"Current time in Sydney is : {sydney_time}")
+
+timezone =pytz.timezone("Africa/Harare")
+johannesburg_time = datetime.now(timezone).strftime("%H:%M:%S")
+print(f"Current time in Johanesbourg is: {johannesburg_time}")
